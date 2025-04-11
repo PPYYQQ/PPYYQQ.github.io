@@ -222,3 +222,29 @@ table {
       margin-bottom: 1rem;
   }
 }
+
+
+.img-overlay-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.base-img,
+.overlay-img {
+  width: 100%;
+  display: block;
+}
+
+.overlay-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;              
+  transition: opacity 0.4s ease-in-out; 
+  pointer-events: none;    
+}
+
+.img-overlay-container:hover .overlay-img {
+  opacity: 1;               
+}
