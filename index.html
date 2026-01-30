@@ -16,34 +16,38 @@
     
     <link rel="stylesheet" type="text/css" href="static/css/stylesheet.css">
     <script src="static/js/script.js"></script>
-    <link rel="icon" href="static/images/icon.png">
+    <link rel="icon" href="static/images/icon/icon.png">
 
     <style>
+      :root {
+        --bg-color: #ffffff;
+        --text-color: #1a1a1a;
+        --link-color: #0066cc;
+      }
+
+      [data-theme="dark"] {
+        --bg-color: #2b2b2b;
+        --text-color: #d3d3d3;
+        --link-color: #66b3ff;
+      }
+
       body {
-        background-color: #2b2b2b; /* Dark gray background */
-        color: #d3d3d3; /* Light gray text */
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
-      
+
       a {
-        color: #66b3ff; /* Light blue for links */
-      }
-      
-      table {
-        color: #d3d3d3;
-      }
-      
-      heading {
-        color: #d3d3d3;
+        color: var(--link-color);
+        transition: color 0.3s ease;
       }
 
-      p {
-        color: #d3d3d3;
-      }
-
-      td {
-        color: #d3d3d3;
+      table, td, p, heading {
+        color: var(--text-color);
+        transition: color 0.3s ease;
       }
     </style>
+
   </head>
 
   <body>
@@ -57,7 +61,7 @@
                   <name>Yongqian Peng</name>
                 </p>
                 <p>
-                  I am a 4th-year undergraduate student in <a href="https://yuanpei.pku.edu.cn/" target="_blank">Yuanpei College</a>, <a href="https://www.pku.edu.cn" target="_blank">Peking University</a>. I'm also a member of the  <a href="https://tongclass.ac.cn/" target="_blank">PKU Tong Class</a>.
+                  I am a 5th-year undergraduate student in <a href="https://yuanpei.pku.edu.cn/" target="_blank">Yuanpei College</a>, <a href="https://www.pku.edu.cn" target="_blank">Peking University</a>. I'm also a member of the  <a href="https://tongclass.ac.cn/" target="_blank">PKU Tong Class</a>.
                   I am currently a student researcher in <a href="https://pku.ai" target="_blank">Cognitive Reasoning (CoRe) Lab</a> at <a href="https://www.ai.pku.edu.cn/" target="_blank">PKU-IAI</a>, advised by <a href="https://yzhu.io" target="_blank">Prof. Yixin Zhu</a>.
                 </p>
                 <p>
@@ -65,9 +69,9 @@
                 </p>
                 <p style="text-align:center">
                   <a href="mailto:yqpeng@stu.pku.edu.cn">Email</a>
-                  &nbsp/&nbsp<a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
-                  &nbsp/&nbsp<a href="https://github.com/PPYYQQ" target="_blank">Github</a>
-                  &nbsp/&nbsp<a href="static/files/CV_yongqian.pdf" target="_blank">CV</a>
+                  &nbsp/ &nbsp<a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+                  &nbsp/ &nbsp<a href="https://github.com/PPYYQQ" target="_blank">Github</a>
+                  &nbsp/ &nbsp<a href="static/files/CV_yongqian.pdf" target="_blank">CV</a>
                 </p>
               </td>
               <td style="padding:2.5%;width:25%;max-width:25%">

@@ -248,3 +248,9 @@ table {
 .img-overlay-container:hover .overlay-img {
   opacity: 1;               
 }
+
+/* 确保粒子可以超出按钮范围 */
+#theme-toggle, #theme-toggle * {
+  pointer-events: auto;
+  box-sizing: border-box;
+}
