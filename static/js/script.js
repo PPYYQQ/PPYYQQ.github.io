@@ -272,17 +272,19 @@ function initAbstractFeature() {
     });
 
     document.addEventListener('click', function(e) {
-        if (e.target.matches('a[href="#"]') && e.target.textContent === '[Abs]') {
+      if (e.target.matches('a[href="#"]') && e.target.textContent.trim() === '[Abs]') {
             e.preventDefault();
             const contentCell = e.target.closest('td');
             const abstract = contentCell.querySelector('abs');
             const tldr = Array.from(contentCell.querySelectorAll('p'))
                 .find(p => p.textContent.trim().startsWith('tl;dr:'));
             
-            if (abstract && tldr) {
+        if (abstract) {
                 const showAbs = abstract.style.display === 'none';
                 abstract.style.display = showAbs ? 'block' : 'none';
-                tldr.style.display = showAbs ? 'none' : 'block';
+          if (tldr) {
+            tldr.style.display = showAbs ? 'none' : 'block';
+          }
             }
         }
     });
